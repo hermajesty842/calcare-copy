@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practice/views/pages/tools.dart';
+import 'package:practice/widgets/widget-tree.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       debugShowCheckedModeBanner: false,
-      home: Tools(),
+      home: WidgetTree(),
     );
   }
 }
