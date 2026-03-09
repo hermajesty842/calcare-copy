@@ -5,6 +5,34 @@ class Profile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            CircleAvatar(
+              radius: 30,
+              backgroundImage: AssetImage("assets/images/puppy.jpg"),
+            ),
+            SizedBox(width: 20),
+            Text("Log in"),
+            Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(10.0),
+                color: Colors.red,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+
+                ],
+              )
+            ),
+          ],
+        ),
+      ),
+      
+    );
   }
 }
