@@ -7,7 +7,7 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             CircleAvatar(

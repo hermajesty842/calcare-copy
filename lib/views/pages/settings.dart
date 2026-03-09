@@ -118,19 +118,58 @@ class Settings extends StatelessWidget {
       Container(
               height: 90,
               width: double.infinity,
-              margin: EdgeInsets.all(10),
+              margin: EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: Colors.white70,
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Column(
-                children: [
-                Text("Please input your name:")
-                ],
+              
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                  Text("Personal information:"),
+                  Column(
+                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextField(
+                          keyboardType: TextInputType.text,
+                          decoration: InputDecoration(
+                            hintText: "please input your name",
+                            border: OutlineInputBorder(),
+                            fillColor: Colors.grey,
+                            filled: true,
+                            constraints: BoxConstraints(maxHeight:30)
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: TextField(
+                          // style: TextStyle(fontSize: 10),
+                           decoration: InputDecoration(
+                            hintText: "Please input your password",
+                            border: OutlineInputBorder(),
+                            fillColor: Colors.grey,
+                            filled: true,
+                            constraints: BoxConstraints(maxHeight:30)
+                           ),
+                        ),
+                      )
+                    ],
+                  )
+                  ],
+                ),
               ),
-      )
+      ),
+      Text("Please fill in your personal information correctly so that we can contact you!"),
+       ElevatedButton(onPressed: () {
+         
+       }, child: Text("submit"))
     ],
         ),
+        
       ),
     );
     
