@@ -40,7 +40,7 @@ List<Map<String, dynamic>> gridItems = [
   },
 ];
 
-List<String> FAQS = [
+List<String> fAQS = [
   "How to check Repairs status?",
   "How to maka a reservation for in-store repairs?",
   "How to check the price of spare parts?",
@@ -52,9 +52,9 @@ class Tools extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
           child: Column(
             children: [
               Padding(
@@ -74,6 +74,7 @@ class Tools extends StatelessWidget {
                 ),
               ),
               Container(
+                // padding: EdgeInsets.all(30.0),
                 height: 200,
                 margin: EdgeInsets.all(10),
                 decoration: BoxDecoration(
@@ -88,7 +89,7 @@ class Tools extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Container(
-                height: 210,
+                height: 230,
                 margin: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 33, 194, 243),
@@ -125,27 +126,6 @@ class Tools extends StatelessWidget {
                   },
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                    'FAQ',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    ),
-                    Row(
-                      children: [
-                        Text("more"),
-                        Icon(Icons.chevron_right),
-                      ],
-                    )
-                  ],
-                ),
-              ),
           
               Container(
                 height: 150,
@@ -158,7 +138,7 @@ class Tools extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    ...FAQS.map((faqsString) {
+                    ...fAQS.map((faqsString) {
                       return Text(faqsString);
                     }),
                   ],

@@ -9,10 +9,10 @@ class WidgetTree extends StatefulWidget {
   const WidgetTree({super.key});
 
   @override
-  State<WidgetTree> createState() => _WidgetTreeState();
+  State<WidgetTree> createState() => WidgetTreeState();
 }
 
-class _WidgetTreeState extends State<WidgetTree> {
+class WidgetTreeState extends State<WidgetTree> {
   int currentIndex = 0;
 
   @override
